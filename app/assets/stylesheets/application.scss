@@ -15,3 +15,42 @@
  */
 
  @import "bootstrap";
+
+ th {
+    background-color: black;
+    font-size: 30px;
+    padding-right: 60px;
+    border-style: solid;
+    color: white;
+ }
+
+ td {
+    background-color: gray;
+    color: black;
+    padding-right: 60px;
+    border-style: solid;
+    border-color: black;
+ }
+
+ tr {
+    border-style: solid;
+    border-color: black;
+    background-color: green;
+ }
+
+form.textfield {
+   padding: 50px;
+   margin: 50px;
+}
+
+.container2 {
+   margin: 60px;
+   text-align: left;
+}
+
+.container {
+   text-align: center; 
+}
+
+
+

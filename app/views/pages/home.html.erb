@@ -1,4 +1,50 @@
 <div class="container pt-5">
-  <h1><i class="bi bi-gem" style="color: red;"></i> Coming soon</h1>
-  <p>Site is under construction</p>
+<h1>Multiplication Table Generator</h1>
+<%= form_with url: root_path, method: :get do |form| %>
+  <%= form.label :tablesize %>
+  <%= form.text_field :table, placeholder:"Input a number between 1 and 12" %>
+  <%= form.submit "Submit" %>
+<% end %>
+
+<p>
+
+<% arr = (1..@tble).to_a %>
+
+<% if @tble <= 12 && @tble >= 1 %>
+
+<div class="container2">
+<h1>
+ <%= @tble %> by <%= @tble %> Multiplication Table 
+ </h1>
+ </div>
+
+ <table>
+
+ <tr>
+  <% arr.each_with_index do |i, idx| %>
+    <th>
+    <%= idx %>
+    </th>
+    <% end %>
+  </tr>
+
+  <% arr.each_with_index do |i, idx| %>
+ <tr>
+   <td>
+   <%= idx %>
+   </td>
+ </tr>
+ <% end %>
+  
+
+ </table> 
+
+
+ 
+ <% else %>
+Nothing to display; submit a table size (between 1 and 12) first. 
+</p>
+<% end %>   
+
+
 </div>
